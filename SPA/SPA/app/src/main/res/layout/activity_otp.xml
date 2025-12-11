@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="15dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.OtpActivity">
+
+    <ImageButton
+        android:id="@+id/otp_back_btn"
+        style="@style/imgTint"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_btn" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/otp_img"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/otp_verification"
+        android:textColor="@color/myPrimary"
+        android:textStyle="bold|italic"
+        android:textSize="30sp"
+        android:textAllCaps="true"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_enter_the_otp_sent_to_your_nxxxxxxx"
+        android:textAlignment="center"
+        style="@style/textcolor"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/xxxxxx"
+        android:textAlignment="center"
+        style="@style/textcolor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/otp_num_txt"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/otp_num_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:itemCount="6"
+        android:textSize="18sp"
+        android:hint="@string/xxxxxx"
+        style="@style/hintClr"
+        app:cursorColor="@color/myPrimary"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp"
+        app:hideLineWhenFilled="true"
+        android:elevation="20dp" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_marginTop="10dp"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mybtn"
+            android:text="@string/verify"
+            android:id="@+id/otp_verify"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:focusable="true"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_marginTop="10dp"
+            android:indeterminateTint="@color/myPrimary"
+            android:layout_gravity="center"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:id="@+id/otp_progress"
+            android:visibility="gone"
+            />
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:id="@+id/otp_resend"/>
+
+    </LinearLayout>
+</LinearLayout>

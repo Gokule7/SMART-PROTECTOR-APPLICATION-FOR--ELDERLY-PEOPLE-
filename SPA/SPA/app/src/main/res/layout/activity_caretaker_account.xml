@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".caretakers.CaretakerAccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_btn"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/caretaker_login_back_btn"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                style="@style/imgTint"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/account_details"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                style="@style/textcolor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:animateLayoutChanges="true">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/caretaker_acc_img"
+                android:scaleType="centerCrop"
+                app:riv_oval="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/circular_mask"
+                android:src="@drawable/user" />
+
+            <ImageButton
+                android:id="@+id/edit_caretaker_img"
+                style="@style/imgTint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:elevation="20dp"
+                android:focusable="true"
+                android:src="@drawable/add_circle" />
+        </FrameLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textfield"
+            android:layout_marginTop="40dp"
+            android:id="@+id/caretaker_name_acc"
+            app:endIconMode="clear_text"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:hint="@string/enter_caretaker_s_name"
+                android:layout_marginStart="4dp"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:ccp_contentColor="@color/myPrimary"
+                android:scrollbarStyle="insideOverlay"
+                android:id="@+id/caretaker_acc_ccp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/textfield"
+                android:layout_marginTop="10dp"
+                android:id="@+id/caretaker_phn_acc"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:hint="@string/caretaker_s_phone"
+                    android:layout_marginStart="4dp"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/update"
+                style="@style/mybtn"
+                android:id="@+id/caretaker_update"
+                />
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:layout_marginTop="10dp"
+                android:indeterminateTint="@color/myPrimary"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/caretaker_acc_progress"
+                android:visibility="gone"
+                />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

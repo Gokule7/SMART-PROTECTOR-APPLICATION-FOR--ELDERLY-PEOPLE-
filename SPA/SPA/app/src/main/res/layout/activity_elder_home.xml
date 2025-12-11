@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context=".elders.ElderHomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/circular_mask"
+            android:src="@drawable/user"
+            android:scaleType="centerCrop"
+            android:elevation="20dp"
+            app:riv_oval="true"
+            app:riv_border_width="1dp"
+            style="@style/bordercolor"
+            android:id="@+id/elders_profile"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/logout"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/elder_logout"
+            style="@style/imgTint"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/hello"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_elder_s_name"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"
+            style="@style/textcolor"
+            android:layout_marginTop="10dp"
+            android:id="@+id/elder_name_greet"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_26_12_2024_11_40am"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/today_date"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/myPrimary"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="30dp"
+            android:id="@+id/elder_home_load"/>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emg"
+            app:tint="@color/white"
+            android:contentDescription="emgBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="50dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="10dp"
+            android:id="@+id/emergency"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/myPrimary"
+            android:layout_gravity="bottom|end"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <GridLayout-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:columnCount="2"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?attr/selectableItemBackground"-->
+<!--            android:clickable="true"-->
+<!--            android:id="@+id/history"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            android:backgroundTint="@color/myPrimary"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            app:cardElevation="0dp"-->
+<!--            app:cardPreventCornerOverlap="false"-->
+<!--            app:cardUseCompatPadding="false">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="0dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/history_img"-->
+<!--                    android:scaleType="centerInside"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:src="@drawable/record"-->
+<!--                    app:tint="@color/white"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="@string/alert_history"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginTop="10dp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?attr/selectableItemBackground"-->
+<!--            android:clickable="true"-->
+<!--            android:id="@+id/upcoming_rem"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:backgroundTint="@color/myPrimary"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            app:cardElevation="0dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/upcoming_img"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:src="@drawable/upcoming"-->
+<!--                    app:tint="@color/white"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="@string/upcoming_reminder_s"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textAlignment="center"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?attr/selectableItemBackground"-->
+<!--            android:clickable="true"-->
+<!--            android:id="@+id/account"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            android:backgroundTint="@color/myPrimary"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            app:cardElevation="0dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:src="@drawable/profile"-->
+<!--                    android:id="@+id/acc_img"-->
+<!--                    app:tint="@color/white"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:text="@string/account"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?attr/selectableItemBackground"-->
+<!--            android:clickable="true"-->
+<!--            android:id="@+id/emergency"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:backgroundTint="@color/myPrimary"-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            app:cardElevation="0dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/emg_img"-->
+<!--                    android:src="@drawable/emg"-->
+<!--                    app:tint="@color/white"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:text="@string/emergency"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:layout_marginTop="10dp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </GridLayout>-->
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"
+        tools:ignore="HighSamplingRate" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" />
+    <uses-feature android:name="android.hardware.sensor.magnetometer" />
+
+    <uses-permission android:name="android.permission.NOTIFICATION_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SPA"
+        tools:targetApi="31">
+        <activity
+            android:name=".services.FallDetectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.displayers.EmergencyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.displayers.ElderMedReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.displayers.ElderCheckReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.schedulers.NoOfMedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".connected.ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".connected.SetElderRemindersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.schedulers.AddMedicationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".reminders.schedulers.AddCheckUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".connected.ConnectedEldersDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".connected.ViewElderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".caretakers.CaretakerAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".connected.ConnectToElderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".elders.ElderAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".caretakers.CaretakerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".elders.ElderHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".elders.ElderAccountDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".caretakers.CaretakerSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".caretakers.CaretakerSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".elders.ElderSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".elders.ElderSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.EntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name=".services.MedReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name=".services.MedReminderSetService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+        <service
+            android:name=".utils.notifications.FireabaseMessaging"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.sensors.FallDetectionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+    </application>
+
+</manifest>

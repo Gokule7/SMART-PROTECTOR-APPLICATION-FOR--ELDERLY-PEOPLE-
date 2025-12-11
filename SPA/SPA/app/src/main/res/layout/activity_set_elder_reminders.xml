@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".connected.SetElderRemindersActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_btn"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:id="@+id/rem_elder_back"
+            android:clickable="true"
+            android:focusable="true"
+            style="@style/imgTint"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:text="@string/elder_s_list"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            style="@style/textcolor"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:animateLayoutChanges="true">
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/myPrimary"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/remElderProgress"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="@string/no_elder_s_found"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:id="@+id/errorMsg"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:id="@+id/remEldersList"/>
+
+    </FrameLayout>
+
+</LinearLayout>

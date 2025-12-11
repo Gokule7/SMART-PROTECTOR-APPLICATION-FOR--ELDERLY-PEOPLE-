@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#00c04b</color>
+    <color name="myPrimary">#EB07A3ED</color>
+    <color name="button_primary">#FF4081</color> <!-- Pink -->
+    <color name="button_secondary">#4CAF50</color> <!-- Green -->
+    <color name="button_tertiary">#2196F3</color> <!-- Blue -->
+</resources>

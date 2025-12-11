@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/elderCardReminder"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    app:cardElevation="20dp"
+    android:layout_marginTop="10dp"
+    android:focusable="true"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="20dp"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:elevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true"
+            android:scaleType="centerCrop"
+            android:id="@+id/elder_list_elder_profile"/>
+
+        <TextView
+            android:id="@+id/elder_list_elderName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/elder_s_name"
+            app:layout_constraintBottom_toTopOf="@id/button_container"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/elder_list_elder_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/elder_list_elder_profile"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="2.1"
+                android:layout_height="wrap_content"
+                android:text="@string/add_medication"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/addMed"
+                android:layout_marginEnd="5dp"
+                style="@style/mybtn"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="1.9"
+                android:layout_height="wrap_content"
+                style="@style/mybtn"
+                android:text="@string/add_check_up"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/addCheckup"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

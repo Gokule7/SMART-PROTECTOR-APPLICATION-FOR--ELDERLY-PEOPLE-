@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".elders.ElderAccountDetailsActivity">
+
+    <ImageButton
+        android:id="@+id/elders_acc_back_btn"
+        style="@style/imgTint"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_btn" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:animateLayoutChanges="true">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/elder_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            android:background="@drawable/circular_mask"
+            android:src="@drawable/user" />
+
+        <ImageButton
+            android:id="@+id/add_elder_img"
+            style="@style/imgTint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:src="@drawable/add_circle" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/elder_ageSelector"
+        style="@style/outlineBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/select_your_dob"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:icon="@android:drawable/arrow_down_float"
+        app:iconTint="@color/myPrimary" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/elder_med_desc"
+        style="@style/textfield"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/enter_elder_s_medical_description"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:endIconMode="clear_text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/elder_acc_next"
+            style="@style/mybtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/next" />
+
+        <ProgressBar
+            android:id="@+id/elder_acc_details_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/myPrimary"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

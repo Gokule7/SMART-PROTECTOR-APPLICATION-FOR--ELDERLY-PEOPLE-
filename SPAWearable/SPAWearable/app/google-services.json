@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "908824026256",
+    "project_id": "smart-protector-app",
+    "storage_bucket": "smart-protector-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908824026256:android:566f22c14216ed409e4c15",
+        "android_client_info": {
+          "package_name": "com.example.spa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkTU7_bc02cjmUu3oD7_GOG2-0j4F1Yf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908824026256:android:5f0f85b6f9939d279e4c15",
+        "android_client_info": {
+          "package_name": "com.example.spawearable"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkTU7_bc02cjmUu3oD7_GOG2-0j4F1Yf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908824026256:android:4629f74108679cae9e4c15",
+        "android_client_info": {
+          "package_name": "com.raju.spawearable"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkTU7_bc02cjmUu3oD7_GOG2-0j4F1Yf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

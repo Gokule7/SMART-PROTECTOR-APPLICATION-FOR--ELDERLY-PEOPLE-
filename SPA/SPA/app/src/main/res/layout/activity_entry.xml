@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".home.EntryActivity">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/app_logo"
+        android:background="@drawable/circular_mask"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SMART PROTECTOR"
+        android:textColor="@color/myPrimary"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/outlineBtn"
+        android:text="@string/enter_as_a_elder"
+        android:id="@+id/elderLogin"
+        android:layout_marginTop="60dp"
+    />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/outlineBtn"
+        android:text="@string/enter_as_a_caretaker"
+        android:id="@+id/caretakerLogin"
+        android:layout_marginTop="10dp"
+        />
+
+
+</LinearLayout>

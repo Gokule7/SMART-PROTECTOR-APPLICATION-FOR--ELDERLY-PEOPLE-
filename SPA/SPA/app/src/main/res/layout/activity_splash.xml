@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.SplashActivity"
+    android:background="@color/myPrimary">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/app_logo"
+        android:background="@drawable/circular_mask"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:indeterminate="true"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/white"
+        android:layout_gravity="center"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/otp_progress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        android:text="@string/welcome_to_nsmart_protector_app"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:shadowColor="@android:color/white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:layout_margin="20dp"/>
+
+
+</LinearLayout>

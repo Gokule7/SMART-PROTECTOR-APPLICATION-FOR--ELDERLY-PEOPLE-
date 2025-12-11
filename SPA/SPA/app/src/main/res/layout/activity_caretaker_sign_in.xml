@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".caretakers.CaretakerSignInActivity">
+
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_btn"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/caretaker_login_back_btn"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        style="@style/imgTint"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/entry_img"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/welcome_caretaker"
+        android:textStyle="bold"
+        android:textColor="@color/myPrimary"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center_horizontal">
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:ccp_contentColor="@color/myPrimary"
+            android:scrollbarStyle="insideOverlay"
+            android:id="@+id/caretaker_login_ccp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textfield"
+            android:layout_marginTop="10dp"
+            android:id="@+id/caretaker_phn_login"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@android:drawable/stat_sys_phone_call"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/caretaker_s_phone"
+                android:layout_marginStart="4dp"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textfield"
+            android:layout_marginTop="10dp"
+            android:id="@+id/caretaker_pass_login"
+            app:endIconMode="password_toggle"
+            app:startIconDrawable="@android:drawable/ic_lock_lock"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:hint="@string/password"
+                android:layout_marginStart="4dp"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/login"
+                style="@style/mybtn"
+                android:id="@+id/caretaker_login"
+                />
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:layout_marginTop="10dp"
+                android:indeterminateTint="@color/myPrimary"
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/caretaker_login_progress"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dont_have_an_account"
+                android:textSize="16sp"
+                style="@style/textcolor"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/myPrimary"
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/caretaker_login_signup"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
